@@ -17,8 +17,8 @@ Install these prerequisites to follow along with the tutorial. See free tutorial
 ## Step 2. Install dependencies
 - Download Python3 https://www.python.org/downloads/
 ```
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 ## Step 3. Run the tests using pytest
 1. Enter Valid email and password in testdata.csv
-2. ```pytest -s -v tests\home\login_test.py```
+2. ```$ pytest -s -v tests\home\login_test.py```
