@@ -1,14 +1,24 @@
-# Simple Python-Selenium Automation script
+# Selenium - Python Automation Sample Framework
 
-# Prerequisites
-python3
+This is a sample implementation of Selenium webdriver libraries in python following a Page Object Model. 
+Follow the steps below to ddownload and run this project
 
-selenium
+## Dependencies
+Install these prerequisites to follow along with the tutorial. See free tutorial or a full explanation of each prerequisite.
 
-# Running
+- Python3 https://docs.python.org/3.7/tutorial/index.html
+- Selenium Webdriver https://selenium-python.readthedocs.io/getting-started.html
+- pip https://pip.pypa.io/en/stable/
+- pytest https://docs.pytest.org/en/latest/
 
-git clone https://github.com/ankurjain00/python_selenium.git
+## Step 1. Clone the project
+`git clone https://github.com/ankurjain00/python_selenium.git`
 
-cd python-selenium
-
-py.test tests\home\login_test.py
+## Step 2. Install dependencies
+- Download Python3 https://www.python.org/downloads/
+```
+pip install -r requirements.txt
+```
+## Step 3. Run the tests using pytest
+1. Enter Valid email and password in testdata.csv
+2. ```pytest -s -v tests\home\login_test.py```
