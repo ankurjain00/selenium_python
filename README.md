@@ -1,7 +1,8 @@
 # Selenium - Python Automation Sample Framework
 
 This is a sample implementation of Selenium webdriver libraries in python following a Page Object Model. 
-Follow the steps below to ddownload and run this project
+
+Follow the steps below to download and run this project
 
 ## Dependencies
 Install these prerequisites to follow along with the tutorial. See free tutorial or a full explanation of each prerequisite.
