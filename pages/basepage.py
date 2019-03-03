@@ -34,13 +34,13 @@ class BasePage(SeleniumDriver):
 		self.ts = Status(self.driver)
 
 	#locators
-	_signinButton = "nav-link-yourAccount"
-	_emailField = "ap_email"
-	_continueButton = "continue"
-	_passwordField = "ap_password"
-	_loginButton = "signInSubmit"
-	_editLogin = "//span[contains(text(),'Edit login')]"
-	_invalidemail = "//span[contains(text(),'We cannot find an account with that email address')]"
+	_signinButton = "nav-link-yourAccount"			# id
+	_emailField = "ap_email"						# id
+	_continueButton = "continue"					# id
+	_passwordField = "ap_password"					# id
+	_loginButton = "signInSubmit"					# id
+	_editLogin = "span.a-color-secondary"			# css
+	_invalidemail = "span.a-list-item"				# css
 
 	def verifyPageTitle(self, titleToVerify):
 		"""
@@ -94,11 +94,11 @@ class BasePage(SeleniumDriver):
 
 	def verifyInvalidEmail(self):
 		self.clickContinueButton()
-		result = self.isElementPresent(locator=self._invalidemail,locatorType="xpath")
+		result = self.isElementPresent(locator=self._invalidemail,locatorType="css")
 		self.ts.markFinal("Invalid Email", result, "Invalid Email Message not displayed")
 
 	def verifyInvalidPassword(self):
-		result = self.isElementPresent(locator=self._editLogin,locatorType="xpath")
+		result = self.isElementPresent(locator=self._editLogin,locatorType="css")
 		self.ts.markFinal("Invalid Password", result, "Invalid Password Message not displayed")
 
 	def verifyLoginSuccessful(self):
@@ -107,7 +107,7 @@ class BasePage(SeleniumDriver):
 		:return: Logs success or failures in automation.log
 		"""
 		self.clickSigninButton()
-		result = self.isElementPresent(locator=self._editLogin,locatorType="xpath")
+		result = self.isElementPresent(locator=self._editLogin,locatorType="css")
 		self.ts.markFinal("Valid Login", result, "Login Verification Unsuccessful")
 
 	def login(self, email, password):
