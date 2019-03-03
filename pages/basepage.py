@@ -35,12 +35,12 @@ class BasePage(SeleniumDriver):
 
 	#locators
 	_signinButton = "nav-link-yourAccount"			# id
-	_emailField = "ap_email"						# id
-	_continueButton = "continue"					# id
-	_passwordField = "ap_password"					# id
-	_loginButton = "signInSubmit"					# id
+	_emailField = "ap_email"				# id
+	_continueButton = "continue"				# id
+	_passwordField = "ap_password"				# id
+	_loginButton = "signInSubmit"				# id
 	_editLogin = "span.a-color-secondary"			# css
-	_invalidemail = "span.a-list-item"				# css
+	_invalidemail = "span.a-list-item"			# css
 
 	def verifyPageTitle(self, titleToVerify):
 		"""
