@@ -2,7 +2,7 @@
 
 This is a sample implementation of Selenium webdriver libraries in python following a Page Object Model. 
 
-Follow the steps below to download and run this project
+Follow the steps below to run this project
 
 ## Dependencies
 Install these prerequisites to follow along with the tutorial. See free tutorial or a full explanation of each prerequisite.
@@ -12,14 +12,11 @@ Install these prerequisites to follow along with the tutorial. See free tutorial
 - pip https://pip.pypa.io/en/stable/
 - pytest https://docs.pytest.org/en/latest/
 
-## Step 1. Clone the project
-`git clone https://github.com/ankurjain00/python_selenium.git`
-
-## Step 2. Install dependencies
+## Step 1. Install dependencies
 - Download Python3 https://www.python.org/downloads/
 ```
 $ pip install -r requirements.txt
 ```
-## Step 3. Run the tests using pytest
+## Step 2. Run the tests using pytest
 1. Enter Valid email and password in testdata.csv
 2. ```$ pytest -s -v tests\home\login_test.py```
