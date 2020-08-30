@@ -18,5 +18,6 @@ Install these prerequisites to follow along with the tutorial. See free tutorial
 $ pip install -r requirements.txt
 ```
 ## Step 2. Run the tests using pytest
-1. Enter Valid email and password in testdata.csv
-2. ```$ pytest -s -v tests\home\login_test.py```
+```
+$ pytest -s -v tests/*
+```
