@@ -20,7 +20,7 @@ class WebDriverFactory():
         Returns:
             None
         """
-        baseURL = "https://www.amazon.in/"
+        baseURL = "http://juliemr.github.io/protractor-demo/"
 
         self.browser = browser
         self.baseURL = baseURL
@@ -42,7 +42,6 @@ class WebDriverFactory():
             'WebDriver Instance'
         """
 
-        #display = Display(visible=0,size=(1024,768))
         options = Options()
         options.add_argument('--proxy-bypass-list=*')
         options.add_argument("--disable-popup-blocking")
@@ -50,16 +49,13 @@ class WebDriverFactory():
         options.add_argument("--no-sandbox")
         chromedriver = "chromedriver.exe"
 
-        if self.browser == "iexplorer":
-            # Set ie driver
-            driver = webdriver.Ie()
-        elif self.browser == "firefox":
+        if self.browser == "firefox":
             driver = webdriver.Firefox()
         elif self.browser == "chromeoptions":
             # Set chrome driver
             driver = webdriver.Chrome(chromedriver,chrome_options=options)
         else:
-            driver = webdriver.Chrome(chromedriver)
+            driver = webdriver.Firefox()
             # Maximize the window
             driver.maximize_window()
         # Setting Driver Implicit Time out for An Element
